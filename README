@@ -1,0 +1,22 @@
+Task 1
+estimate_gaussian - calculeaza media elementelor de pe fiecare linie pentru mean_values si calculeaza matricea de variatie 
+multivariate_gaussian - calculeaza functia care descrie probabilitatea de apatitie a unui element
+check_prediction - calculeaza valorile false_positive true_positive si false_positive
+optimal_treshold - calculeaza cel mai bun epsilon, incercand pentru fiecare epsilon de la min(probabilities) pana la max(probabilities) calculand pentru fiecare precizia recallul si F1
+
+Task 2
+linear_kernel, polynomial_kernel, gaussian_kernel - direct dupa formulele din fisa temei
+split_dataset - desparte amtricea X si vectorul y in functie de procentajul punand prima parte de linii pe setul de antrenament iar restul pe setul de predictii
+build_kernel - creaza matricea de kernel dupa modelul de la matricea Gram
+cholesky - factorizare LU realizata dupa modelul de l-am facut la laborator
+get_lower_inverse - algoritm in care am folosit GPP, dupa modelul de la laborator
+conjugate_gradient - realizata dupa modelul functiei de pseudocod din fisa
+get_prediction_params - rezolva sistemul dupa o factorizare cholesky unde rezolva un sitem de forma LU * x = y
+get_predition_params_iterative - foloseste funtia gradientului conjugat pentru a afla solutia
+eval_value - calculeaza si returneaza predictia
+
+Task 3
+k_secv - creeaza celluri si cu ajutorul functiei strjoin creaza secventele de marime k
+distinct_k_secv, distinct_words - utilizeaza unique
+word_idx, k_secv_idx - folosete containers.Map
+stochastic_matrix - folosete word_idx si k_secv_idx, initializeaza matricea sparse si dupa adauga pentru fiecare cuvant din setul de date pentru cuvantul current in matrice elementul corespunzator pentru urmatorul cuvant in functie de k 
